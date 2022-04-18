@@ -1,9 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title style="text-align: center;">login to gymsNearMe</ion-title>
+    <ion-icon name="barbell-outline"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="login-form">
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Username</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Password</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <div padding>
+          <button block>Sign In</button>
 
+        </div>
+        <div padding>
+          <button style="color: rgb(53, 53, 255);" block>Sign Up</button>
+
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
