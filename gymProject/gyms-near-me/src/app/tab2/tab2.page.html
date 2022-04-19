@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <div class="container">
+
+      <div class="content-1">
+        <ion-title>gymsNearMe </ion-title>
+        <div class="content-2">
+          <ion-icon name="barbell-outline"></ion-icon>
+          <div>
+            <p>Search for any gym</p>
+          </div>
+        </div>
+      </div>
+      <div class="sub-container">
+
+        <div class="content-3">
+
+          <ion-button routerLink="/menu" color="secondary" id="profile-button">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </ion-button>
+
+
+        </div>
+      </div>
+
+
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
