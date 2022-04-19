@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container div {
+    border: 1px;
+    padding: 10px;
+}
+
+.content-1 {
+    flex: 1;
+    text-align: center;
+    justify-content: flex-start;
+    order: 2;
+}
+
+.content-2 {
+    flex: 1;
+    text-align: center;
+    order: 3;
+    justify-content: flex-start;
+}
