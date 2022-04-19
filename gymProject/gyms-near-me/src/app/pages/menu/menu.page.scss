@@ -1,7 +1,8 @@
 // .active-item{
 //     border-left: 8px solid var(--ion-color-primary);
 // }
-.container{
+.container{// just to display the profile icon and the title as a flex box in css next to each other and each one in a container of it's own
+
     display: flex;
 }
 .container div{
@@ -18,4 +19,8 @@
 }
 #icon-profile{
     font-size:x-large;
+}
+#sign-in:hover{
+    cursor:pointer;
+    color: #3dc2ff;
 }
