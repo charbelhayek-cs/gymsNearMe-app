@@ -14,5 +14,8 @@ export class MenuPage implements OnInit {
   goToSignIn(){
     this.router.navigateByUrl('/login');
   }
+  goToHomePage(){
+    this.router.navigateByUrl('/tabs/tab1');
+  }
 
 }

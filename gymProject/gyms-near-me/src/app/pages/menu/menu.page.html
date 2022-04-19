@@ -1,42 +1,76 @@
-<ion-split-pane>
-  <ion-menu side="end" type="push" contentId="main">
-    <!-- the contentId should be the same as the id of the router-outlet so that it should know where tto display it-->
-    <ion-header>
-      <ion-toolbar color="secondary">
-        <div class="container">
-          <div class="container-1">
-            <ion-title>profile</ion-title>
-          </div>
-          <div class="container-2">
-            <ion-icon id="icon-profile" name="person-circle-outline"></ion-icon>
+<div>
+  <ion-split-pane>
+    <ion-menu side="end" type="push" contentId="main">
+      <!-- the contentId should be the same as the id of the router-outlet so that it should know where tto display it-->
+      <ion-header>
+        <ion-toolbar color="secondary">
+          <div class="container">
+            <div class="container-1">
+              <ion-title>profile</ion-title>
+
+            </div>
+            <div class="container-2">
+              <ion-icon id="icon-profile" name="person-circle-outline"></ion-icon>
+
+            </div>
+            <div class="container-3">
+              <ion-button color="dark" (click)="goToHomePage()">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </ion-button>
+            </div>
 
           </div>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <a (click)="goToSignIn()" id="sign-in">
 
-        </div>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <a (click)="goToSignIn()" id="sign-in">
+            <ion-item>sign-in</ion-item>
 
-          <ion-item>sign-in</ion-item>
+          </a>
+          <a (click)="goToSignIn()" id="sign-in">
+            <ion-item>subsciptions</ion-item>
+          </a>
+          <a (click)="goToSignIn()" id="sign-in">
+            <ion-item>favorites</ion-item>
+          </a>
+          <a (click)="goToSignIn()" id="sign-in">
+            <ion-item>settings</ion-item>
+          </a>
+          <a (click)="goToSignIn()" id="sign-in">
+            <ion-item>My plan</ion-item>
+          </a>
+          <h2 style="text-align: center;"> Contact us!</h2>
+          <!-- this is the footer used in the login and the sign up the same css and html tags where used and flex was used here-->
+          <div class="footer">
 
-        </a>
-        <a (click)="goToSignIn()" id="sign-in">
-          <ion-item>subsciptions</ion-item>
-        </a>
-        <a (click)="goToSignIn()" id="sign-in">
-          <ion-item>favorites</ion-item>
-        </a>
-        <a (click)="goToSignIn()" id="sign-in">
-          <ion-item>settings</ion-item>
-        </a>
-        <a (click)="goToSignIn()" id="sign-in">
-          <ion-item>My plan</ion-item>
-        </a>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+            <div class="instagram">
+              <ion-button color="secondary">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="twitter">
+              <ion-button color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="facebook">
+              <ion-button color="secondary">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="mail">
+              <ion-button color="secondary">
+                <ion-icon name="mail-outline"></ion-icon>
+              </ion-button>
+            </div>
 
-  <ion-router-outlet id="main"></ion-router-outlet>
-</ion-split-pane>
+          </div>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
+</div>
