@@ -1,0 +1,30 @@
+<ion-split-pane>
+  <ion-menu side="end" type="push" contentId="main">
+    <!-- the contentId should be the same as the id of the router-outlet so that it should know where tto display it-->
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <div class="container">
+          <div class="container-1">
+            <ion-title>profile</ion-title>
+          </div>
+          <div class="container-2">
+            <ion-icon id="icon-profile" name="person-circle-outline"></ion-icon>
+
+          </div>
+
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>sign-in</ion-item>
+        <ion-item>subsciptions</ion-item>
+        <ion-item>favorites</ion-item>
+        <ion-item>settings</ion-item>
+        <ion-item>My plan</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>
