@@ -1,23 +1,33 @@
-.container {
+.container{
     display: flex;
-    flex-direction: column;
+    
 }
 
 .container div {
-    border: 1px;
+    border: 1px ;
     padding: 10px;
+    
 }
 
 .content-1 {
     flex: 1;
     text-align: center;
-    justify-content: flex-start;
-    order: 2;
+    // justify-content: flex-start;
+    order: 1;
+}
+.sub-container{
+    display: flex;
+    order:2;
 }
 
 .content-2 {
-    flex: 1;
+    flex: 7;
     text-align: center;
-    order: 3;
-    justify-content: flex-start;
+    order: 1;
+    // justify-content: flex-start;
+}
+.content-3{
+    flex:0;
+    order: 2;
+    text-align: end;
 }
