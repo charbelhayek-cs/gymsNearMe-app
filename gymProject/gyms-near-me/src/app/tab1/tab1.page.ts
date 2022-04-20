@@ -7,7 +7,7 @@ import { FetchGymsService, Gym } from '../apis/fetch-gyms.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-gyms: Gym[];// the interface that i did in the fetch gyms file .ts
+ gyms: Gym[];// the interface that i did in the fetch gyms file .ts
   constructor(private service: FetchGymsService) {}
   ngOninit(){
     //on start of every ionic application in this case the tab1
