@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 include("db_info.php");
 $query=$mysqli->prepare("SELECT username,password FROM user");
 $query->execute();
