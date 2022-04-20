@@ -26,5 +26,32 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card *ngFor="let plan of plans">
+    <ion-card-header>
 
+      <ion-card-title style="text-align: center;">
+        <h1>{{plan.planName}}</h1>
+      </ion-card-title>
+      <ion-card-subtitle>
+        <h1>{{plan.planCreator}}</h1>
+        <p>{{plan.planInfo}}</p>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-item>
+      <div class="image-container">
+
+        <div class="icon-card">
+
+          <ion-button fill="outlinee" slot="start">
+            <ion-icon style="font-size:x-large;" name="bookmark-outline" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </ion-item>
+    <ion-card-content>
+
+    </ion-card-content>
+
+
+  </ion-card>
 </ion-content>

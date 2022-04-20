@@ -33,3 +33,26 @@
     order: 2;
     text-align: end;
 }
+.image-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container #image {
+    width: 100%;
+    height: 400px;
+    display: inline-block;
+
+}
+
+.image-card {
+    width: 100%;
+
+}
+
+.image-container div {
+    border: 1px;
+}
