@@ -27,40 +27,35 @@
 
 <ion-content [fullscreen]="true">
 
+
   <ion-card *ngFor="let gym of gyms">
     <ion-card-header>
-      <ion-card-subtitle>{{gym.gymName}}</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
-    </ion-card-header>
 
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-
-      <ion-card-title style="text-align: center;">{{gym.gymName}}</ion-card-title>
+      <ion-card-title>
+        <h1>{{gym.gymName}}</h1>
+      </ion-card-title>
+      <ion-card-subtitle>
+        <h1>{{gym.gymLocation}}</h1>
+      </ion-card-subtitle>
     </ion-card-header>
     <ion-item>
       <div class="image-container">
         <div class="image-card">
-          <ion-img id="image" src="../../assets/image/twelve.jpg"></ion-img>
+          <ion-img id="image" src="{{gym.imgUrl}}"></ion-img>
         </div>
         <div class="icon-card">
+
           <ion-button fill="outlinee" slot="start">
             <ion-icon style="font-size:x-large;" name="bookmark-outline" slot="end"></ion-icon>
           </ion-button>
         </div>
       </div>
     </ion-item>
-
-
     <ion-card-content>
-      This is content, without any paragraph or header tags,
-      within an ion-card-content element.
+      {{gym.gymInfo}}
     </ion-card-content>
+
+
   </ion-card>
 
 </ion-content>
