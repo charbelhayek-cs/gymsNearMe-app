@@ -1,17 +1,7 @@
-
-<!-- //setting config database 
-// $x=intval($_POST["x"]);// it is a global array that contains the key x
-// $y=intval($_POST["y"]);//we will put the x and y in the postman api as a post and it will return the summ
-// //intval means we are casting inside int like in java 
-// $z=$x+$y;// the values of x and y come from when we call the server on POST api it comes from the api we specify x and y inside body
-
-// $array=[];
-// $array["answer="]=$z;// the answer will be as a json file inside {} as answer=10
-
-// echo Json_encode($array); -->
-
 <?php
+header('Access-Control-Allow-Origin: *');
 include("db_info.php");
+$data=json_decode("file_get_contents("php:input"));
 
 $fullName = $_POST["fullName"];
 $userName = $_POST["userName"];
