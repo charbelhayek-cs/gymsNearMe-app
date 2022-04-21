@@ -6,6 +6,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.page.scss'],
 })
 export class SignUpPage implements OnInit {
+fullName: string; //this will take as parameter the input of the user from the front end
+username: string;
+password: string;
+email: string;
+location: string;
+phoneNumber: string;
 
   constructor(private router: Router) { }
   goToHomePage(){
