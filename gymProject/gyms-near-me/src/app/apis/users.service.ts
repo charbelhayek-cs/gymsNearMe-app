@@ -18,8 +18,8 @@ export class UsersService {
   getAllUsers(){
     this.http.get<[User]>(this.url+'getAccount.php');
   }
-  addNewUsers(){
-    return this.http.post(this.url +'register.php',JSON.stringify(User));//i will post what i put inside the User class
-    
+  addNewUsers(user: User){
+    return this.http.post(this.url +'register.php',JSON.stringify(user));//i will post what i put inside the User class
+
   }
 }

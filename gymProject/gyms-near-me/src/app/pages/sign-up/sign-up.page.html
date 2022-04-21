@@ -4,92 +4,85 @@
 
   </ion-toolbar>
 </ion-header>
+<div class="sign-up-form">
+  <form action="">
+    <ion-list>
+      <!-- #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)" -->
 
-<ion-content>
+      <ion-item>
+        <ion-label>full name</ion-label>
+        <ion-input required type="text" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-input required type="text" ngMode></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone number</ion-label>
+        <ion-input required type="number" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>email</ion-label>
+        <ion-input required type="email" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>password</ion-label>
+        <ion-input required type="password" ngModel></ion-input>
+      </ion-item>
+      <!-- <ion-item>
+                <ion-label>password</ion-label>
+                <ion-input required type="password" ngModel></ion-input>
+              </ion-item> -->
 
-  <div class="sign-up-form">
+    </ion-list>
 
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-label>full name</ion-label>
-            <ion-input required type="text" [(ngModel)]="fullName"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>Username</ion-label>
-            <ion-input required type="text" [(ngModel)]="username"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>Phone number</ion-label>
-            <ion-input required type="number" [(ngModel)]="phoneNumber"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>email</ion-label>
-            <ion-input required type="email" [(ngModel)]="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>password</ion-label>
-            <ion-input required type="password" [(ngModel)]="password"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>password</ion-label>
-            <ion-input required type="password" [(ngModel)]="confirmPassword"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>location</ion-label>
-            <ion-input type="text" [(ngModel)]="location"></ion-input>
-          </ion-item>
-        </ion-list>
+    <div padding>
+      <ion-button (click)="goToHomePage()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button (ngSubmit)="onSubmit(userPost.value)">register</ion-button>
+      <!-- (click)="addAccount()" -->
+    </div>
+    <div padding>
+      <p>already have an account?</p>
+      <ion-button color="secondary" (click)="goToSignIn()">sign in</ion-button>
+    </div>
+    <div>
+      <ion-card color="black">
+        <ion-card-header>
 
-        <div padding>
-          <ion-button (click)="goToHomePage()">
-            <ion-icon name="home-outline"></ion-icon>
-          </ion-button>
-          <ion-button (click)="addAccount()">register</ion-button>
+          <ion-card-title style="text-align: center;">Contact us!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="footer">
 
-        </div>
-        <div padding>
-          <p>already have an account?</p>
-          <ion-button color="secondary" (click)="goToSignIn()">sign in</ion-button>
-        </div>
-      </ion-card-content>
-    </ion-card>
-  </div>
-  <div>
-    <ion-card color="black">
-      <ion-card-header>
+            <div class="instagram">
+              <ion-button href="https://www.instagram.com/gymshark/?hl=en" target="_blank" color="secondary">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="twitter">
+              <ion-button href="https://twitter.com/Gymshark?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank" color="secondary">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="facebook">
+              <ion-button href="https://www.facebook.com/Gymshark/" target="_blank" color="secondary">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </ion-button>
+            </div>
+            <div class="mail">
+              <ion-button href="https://mail.google.com/mail" target="_blank" mailto="charbel.elhayek@lau.edu"
+                color="secondary">
+                <ion-icon name="mail-outline"></ion-icon>
+              </ion-button>
+            </div>
 
-        <ion-card-title style="text-align: center;">Contact us!</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <div class="footer">
-
-          <div class="instagram">
-            <ion-button href="https://www.instagram.com/gymshark/?hl=en" target="_blank" color="secondary">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </ion-button>
           </div>
-          <div class="twitter">
-            <ion-button href="https://twitter.com/Gymshark?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-              target="_blank" color="secondary">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </ion-button>
-          </div>
-          <div class="facebook">
-            <ion-button href="https://www.facebook.com/Gymshark/" target="_blank" color="secondary">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </ion-button>
-          </div>
-          <div class="mail">
-            <ion-button href="https://mail.google.com/mail" target="_blank" mailto="charbel.elhayek@lau.edu"
-              color="secondary">
-              <ion-icon name="mail-outline"></ion-icon>
-            </ion-button>
-          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
 
-        </div>
-      </ion-card-content>
-    </ion-card>
-  </div>
-</ion-content>
+  </form>
+</div>
