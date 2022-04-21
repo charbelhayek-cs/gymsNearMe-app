@@ -6,8 +6,8 @@ import {FetchPlansService, Plan} from '../apis/fetch-plans.service';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  plan: Plan=new Plan();
-  plans: Plan[];
+      plan: Plan=new Plan();
+      plans: Plan[];
 
   constructor(private service: FetchPlansService) {}
   // eslint-disable-next-line @angular-eslint/use-lifecycle-interface

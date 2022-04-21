@@ -9,7 +9,7 @@
         <div class="content-2">
           <ion-icon name="barbell-outline"></ion-icon>
 
-          <p>Search for any gym</p>
+
 
         </div>
       </div>
@@ -33,4 +33,65 @@
 
 <ion-content [fullscreen]="true">
 
+  <ion-searchbar color="secondary" placeholder="type any gym or plan you want" [(ngModel)]="searchTerm"
+    cancelButtonicon="cancel-button-icon" animated>
+  </ion-searchbar>
+  <!--ngModel means that whatever is typed in the search bar will be put inside searchTerm -->
+  <ion-card *ngFor="let plan of plans | filter:searchTerm">
+    <ion-card-header>
+
+      <ion-card-title style="text-align: center;">
+        <h1>{{plan.planName}}</h1>
+      </ion-card-title>
+      <ion-card-subtitle>
+        <h1>{{plan.planCreator}}</h1>
+        <p>{{plan.planInfo}}</p>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-item>
+      <div class="image-container">
+
+        <div class="icon-card">
+
+          <ion-button fill="outlinee" slot="start">
+            <ion-icon style="font-size:x-large;" name="bookmark-outline" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </ion-item>
+    <ion-card-content>
+
+    </ion-card-content>
+
+
+  </ion-card>
+  <ion-card *ngFor="let gym of gyms |filter: searchTerm">
+    <ion-card-header>
+
+      <ion-card-title>
+        <h1>{{gym.gymName}}</h1>
+      </ion-card-title>
+      <ion-card-subtitle>
+        <h1>{{gym.gymLocation}}</h1>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-item>
+      <div class="image-container">
+        <div class="image-card">
+          <ion-img id="image" src="{{gym.imgUrl}}"></ion-img>
+        </div>
+        <div class="icon-card">
+
+          <ion-button fill="outlinee" slot="start">
+            <ion-icon style="font-size:x-large;" name="bookmark-outline" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </ion-item>
+    <ion-card-content>
+      {{gym.gymInfo}}
+    </ion-card-content>
+
+
+  </ion-card>
 </ion-content>
