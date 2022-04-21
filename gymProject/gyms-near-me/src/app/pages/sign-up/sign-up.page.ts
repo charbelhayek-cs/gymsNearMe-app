@@ -9,6 +9,7 @@ export class SignUpPage implements OnInit {
 fullName: string; //this will take as parameter the input of the user from the front end
 username: string;
 password: string;
+confirmPassword: string;
 email: string;
 location: string;
 phoneNumber: string;
@@ -19,6 +20,10 @@ phoneNumber: string;
   }
   goToSignIn(){
     this.router.navigateByUrl('/login');
+  }
+  addAccount(){
+    // console.log(this.username); just for debugging perpuses
+
   }
 
   ngOnInit() {

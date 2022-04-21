@@ -18,7 +18,7 @@
           </ion-item>
           <ion-item>
             <ion-label>Username</ion-label>
-            <ion-input required type="text" [(ngModel)]="Username"></ion-input>
+            <ion-input required type="text" [(ngModel)]="username"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Phone number</ion-label>
@@ -33,6 +33,10 @@
             <ion-input required type="password" [(ngModel)]="password"></ion-input>
           </ion-item>
           <ion-item>
+            <ion-label>password</ion-label>
+            <ion-input required type="password" [(ngModel)]="confirmPassword"></ion-input>
+          </ion-item>
+          <ion-item>
             <ion-label>location</ion-label>
             <ion-input type="text" [(ngModel)]="location"></ion-input>
           </ion-item>
@@ -42,7 +46,7 @@
           <ion-button (click)="goToHomePage()">
             <ion-icon name="home-outline"></ion-icon>
           </ion-button>
-          <ion-button (click)="goToSignUp()">register</ion-button>
+          <ion-button (click)="addAccount()">register</ion-button>
 
         </div>
         <div padding>
