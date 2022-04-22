@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService, User } from 'src/app/apis/users.service';
+import {NgForm} from '@angular/forms';
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.page.html',
@@ -23,12 +25,12 @@ user: User= new User();
   goToSignIn(){
     this.router.navigateByUrl('/login');
   }
-  onSubmit(data){//to submit the list i will post the data that i got to here
-    this.service.addNewUsers(data).subscribe(result =>{
-      console.log(result);
-    });
+  // onSubmit(data){//to submit the list i will post the data that i got to here
+  //   this.service.addNewUsers(data).subscribe(result =>{
+  //     console.log(result);
+  //   });
 
-  }
+  // }
   // addAccount(){
   //   // console.log(this.username); just for debugging perpuses
 

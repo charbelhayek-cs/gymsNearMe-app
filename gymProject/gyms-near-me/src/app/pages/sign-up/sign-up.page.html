@@ -5,29 +5,29 @@
   </ion-toolbar>
 </ion-header>
 <div class="sign-up-form">
-  <form action="">
+  <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost)">
     <ion-list>
       <!-- #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)" -->
 
       <ion-item>
         <ion-label>full name</ion-label>
-        <ion-input required type="text" ngModel></ion-input>
+        <ion-input required type="text" name="firstName"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Username</ion-label>
-        <ion-input required type="text" ngMode></ion-input>
+        <ion-input required type="text" name="username"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Phone number</ion-label>
-        <ion-input required type="number" ngModel></ion-input>
+        <ion-input required type="number" name="phoneNumber"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>email</ion-label>
-        <ion-input required type="email" ngModel></ion-input>
+        <ion-input required type="email" name="email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>password</ion-label>
-        <ion-input required type="password" ngModel></ion-input>
+        <ion-input required type="password" name="password"></ion-input>
       </ion-item>
       <!-- <ion-item>
                 <ion-label>password</ion-label>
@@ -40,7 +40,7 @@
       <ion-button (click)="goToHomePage()">
         <ion-icon name="home-outline"></ion-icon>
       </ion-button>
-      <ion-button (ngSubmit)="onSubmit(userPost.value)">register</ion-button>
+      <ion-button type="submit" name="submit">register </ion-button>
       <!-- (click)="addAccount()" -->
     </div>
     <div padding>
