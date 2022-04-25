@@ -10,13 +10,6 @@ import {NgForm} from '@angular/forms';
 })
 export class SignUpPage implements OnInit {
 user: User= new User();
-// users: [
-// fullName: string,//this will take as parameter the input of the user from the front end
-// username: string,
-// password: string,
-// email: string,
-// location: string,
-// phoneNumber: string];
 
   constructor(private router: Router, private service: UsersService) { }
   goToHomePage(){
@@ -31,6 +24,8 @@ user: User= new User();
  console.log(form.value);
  this.service.addNewUsers(this.user).subscribe(response =>{
  console.log(response);
+ window.alert('you have successfully signed in');// to let the user know that they successfully signed in
+
 
  });
  }
