@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 export class User{
-  fullName: string;
+fullName: string;
 userName: string;
 password: string;
 email: string;
@@ -19,7 +19,7 @@ export class UsersService {
     this.http.get<[User]>(this.url+'getAccount.php');
   }
   addNewUsers(user: User){
-    return this.http.post(this.url +'register.php',JSON.stringify(user));//i will post what i put inside the User class
+    return this.http.post(this.url +'register.php', user);//i will post what i put inside the User class
 
   }
 }

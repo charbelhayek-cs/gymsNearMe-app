@@ -26,15 +26,14 @@ user: User= new User();
     this.router.navigateByUrl('/login');
   }
   // onSubmit(data){//to submit the list i will post the data that i got to here
-  //   this.service.addNewUsers(data).subscribe(result =>{
-  //     console.log(result);
-  //   });
+  onSubmit(form: NgForm){
+ this.user = form.value;
+ console.log(form.value);
+ this.service.addNewUsers(this.user).subscribe(response =>{
+ console.log(response);
 
-  // }
-  // addAccount(){
-  //   // console.log(this.username); just for debugging perpuses
-
-  // }
+ });
+ }
 
   ngOnInit() {
   }

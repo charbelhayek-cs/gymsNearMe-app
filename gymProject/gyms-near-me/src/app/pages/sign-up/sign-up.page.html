@@ -11,24 +11,30 @@
 
       <ion-item>
         <ion-label>full name</ion-label>
-        <ion-input required type="text" name="firstName"></ion-input>
+        <ion-input required type="text" name="fullName" ngModel></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Username</ion-label>
-        <ion-input required type="text" name="username"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Phone number</ion-label>
-        <ion-input required type="number" name="phoneNumber"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>email</ion-label>
-        <ion-input required type="email" name="email"></ion-input>
+        <ion-input required="true" type="text" name="userName" ngModel></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>password</ion-label>
-        <ion-input required type="password" name="password"></ion-input>
+        <ion-input required="true" type="password" name="password" ngModel></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-label>email</ion-label>
+        <ion-input required="true" type="text" name="email" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone number</ion-label>
+        <ion-input required="true" type="text" name="phoneNumber" ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>location</ion-label>
+        <ion-input required="true" type="text" name="location" ngModel></ion-input>
+      </ion-item>
+
+
       <!-- <ion-item>
                 <ion-label>password</ion-label>
                 <ion-input required type="password" ngModel></ion-input>
