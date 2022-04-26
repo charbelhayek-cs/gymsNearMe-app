@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService, User } from 'src/app/apis/users.service';
 import {NgForm} from '@angular/forms';
-import { AlertController } from 'ionic-angular';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-sign-up',
@@ -19,6 +19,14 @@ user: User= new User();
   goToSignIn(){
     this.router.navigateByUrl('/login');
   }
+  //controlling the alerts method
+   async presentAlert() {
+  const alert =await this.alertCtrl.create({
+    message: 'passwords do not match, please try again',
+    buttons: ['Dismiss']
+  });
+  alert.present();
+}
   // onSubmit(data){//to submit the list i will post the data that i got to here
   onSubmit(form: NgForm){
  this.user = form.value;
@@ -30,7 +38,7 @@ if(this.user.password===this.user.verifyPassword){
  });
 }
 else{
-  window.alert('')
+  this.presentAlert();
 }
 }
 
