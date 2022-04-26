@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService, User } from 'src/app/apis/users.service';
 import {NgForm} from '@angular/forms';
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +12,7 @@ import {NgForm} from '@angular/forms';
 export class SignUpPage implements OnInit {
 user: User= new User();
 
-  constructor(private router: Router, private service: UsersService) { }
+  constructor(private router: Router, private service: UsersService, private alertCtrl: AlertController) { }
   goToHomePage(){
     this.router.navigateByUrl('/tabs/tab1');
   }
@@ -22,13 +23,17 @@ user: User= new User();
   onSubmit(form: NgForm){
  this.user = form.value;
  console.log(form.value);
+if(this.user.password===this.user.verifyPassword){
  this.service.addNewUsers(this.user).subscribe(response =>{
  console.log(response);
- window.alert('you have successfully signed in');// to let the user know that they successfully signed in
-
-
+ this.router.navigateByUrl('/login');// to let the user go to the sign in page so that they can sign in their registered account
  });
- }
+}
+else{
+  window.alert('')
+}
+}
+
 
   ngOnInit() {
   }
