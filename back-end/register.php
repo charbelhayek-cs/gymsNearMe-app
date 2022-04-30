@@ -1,18 +1,18 @@
 <?php
-header('Access-Control-Allow-Origin: *');
 include("db_info.php");
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: *');
 $data=json_decode(file_get_contents("php://input"));
-
-$fullName = $data->fullName;
-$userName = $data->userName;
-$password = $data->password;
-$hashed_password= password_hash($password, PASSWORD_DEFAULT);
-$email=$data->email;
-$phoneNumber=$data->phoneNumber;
-$location=$data->location;
+$fullName= $data->fullName;
+$userName= $data->userName;
+$password= $data->password;
+$email= $data->email;
+$phoneNumber= $data->phoneNumber;
+$location= $data->location;
+$hashed_password=password_hash($password, PASSWORD_DEFAULT);
 
 // Insert variables in the database
-$query = $mysqli->prepare("INSERT INTO user(fullName, userName, hashed_password, email, phoneNumber, location) VALUES (?, ?, ?, ?, ?, ?);");
+$query = $mysqli->prepare("INSERT INTO user(fullName, userName, password, email, phoneNumber, location) VALUES (?, ?, ?, ?, ?, ?);");
 $query->bind_param("ssssss", $fullName, $userName, $hashed_password, $email, $phoneNumber, $location);
 $query->execute();
 
