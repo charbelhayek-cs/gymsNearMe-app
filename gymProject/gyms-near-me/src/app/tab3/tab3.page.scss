@@ -4,7 +4,7 @@
 }
 
 .container div {
-    border: 1px solid;
+    border: 1px ;
     padding: 10px;
 
 }
@@ -32,6 +32,9 @@
     flex: 0;
     order: 2;
     text-align: end;
+}
+.sub-container-2{
+    display:flex;
 }
 .image-container {
     width: 100%;

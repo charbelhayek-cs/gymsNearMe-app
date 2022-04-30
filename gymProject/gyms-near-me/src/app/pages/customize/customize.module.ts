@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CustomizePageRoutingModule } from './customize-routing.module';
 
 import { CustomizePage } from './customize.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CustomizePageRoutingModule
+    CustomizePageRoutingModule,
+    HttpClientModule
   ],
   declarations: [CustomizePage]
 })
