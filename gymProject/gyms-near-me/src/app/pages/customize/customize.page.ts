@@ -28,6 +28,7 @@ export class CustomizePage implements OnInit {
       this.service.addPlan(this.plan).subscribe(response => {
         console.log(response);
         this.presentAlert();
+        form.reset();
         this.router.navigateByUrl('/tabs/tab3');// to let the user go to the sign in page so that they can sign in their registered account
       });
     }

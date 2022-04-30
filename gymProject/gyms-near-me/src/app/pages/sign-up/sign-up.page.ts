@@ -34,6 +34,7 @@ export class SignUpPage implements OnInit {
     if (this.user.password === this.user.verifyPassword) {
       this.service.addNewUsers(this.user).subscribe(response => {
         console.log(response);
+        form.reset();
         this.router.navigateByUrl('/login');// to let the user go to the sign in page so that they can sign in their registered account
       });
     }
