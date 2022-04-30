@@ -3,9 +3,9 @@ include("db_info.php");
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: *');
 $data=json_decode(file_get_contents("php://input"));
-$planName=$data->$planName;
-$planCreator=$data->$planCreator;
-$planInfo=$data->$planInfo;
+$planName=$data->planName;
+$planCreator=$data->planCreator;
+$planInfo=$data->planInfo;
 
 // Insert variables in the database
 $query = $mysqli->prepare("INSERT INTO workoutplan(planName,planCreator,planinfo) VALUES (?, ?, ?);");
