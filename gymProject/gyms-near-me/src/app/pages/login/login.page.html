@@ -22,26 +22,24 @@
 
 <ion-content>
   <div class="login-form">
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-label>Username</ion-label>
-            <ion-input type="text"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>Password</ion-label>
-            <ion-input type="password"></ion-input>
-          </ion-item>
-        </ion-list>
+    <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost)">
+      <ion-list>
+        <ion-item>
+          <ion-label>Username</ion-label>
+          <ion-input type="text" name="username" ngModel></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input type="password" name="password" ngModel></ion-input>
+        </ion-item>
+      </ion-list>
 
-        <div padding>
-          <ion-button color="secondary">login</ion-button>
-          <ion-button (click)="goToSignUp()">sign up</ion-button>
+      <div padding>
+        <ion-button color="secondary" type="submit" name="submit">login</ion-button>
+        <ion-button (click)="goToSignUp()">sign up</ion-button>
 
-        </div>
-      </ion-card-content>
-    </ion-card>
+      </div>
+    </form>
   </div>
   <div>
     <ion-card color="black">
