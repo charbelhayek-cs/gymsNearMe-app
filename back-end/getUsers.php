@@ -1,14 +1,33 @@
 <?php
-header('Access-Control-Allow-Origin: *');
 include("db_info.php");
-$query=$mysqli->prepare("SELECT username,password FROM user");
-$query->execute();
-$array=$query->get_result();
-$response=[];
-while($result=$array->fetch_assoc()){
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: *');
+session_start();
 
-$response[]=$result;
+$data = json_decode(file_get_contents('php://input'));
+ 
+$userName = $data->userName;
+$password = $data->password;
+ 
+$sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+$query = $conn->query($sql);
+ 
+if($query->num_rows>0){
+	$row = $query->fetch_array();
+	$out['message'] = 'Login Successful';
+	$out['user'] = uniqid('ang_');
+	$_SESSION['user'] = $row['memid'];
 }
-$json_response=json_encode($response);
-echo $json_response;
+else{
+	$out['error'] = true;
+	$out['message'] = 'Invalid Login';
+}
+ 
+echo json_encode($out);
+ 
+
+
+
+
+
 ?>
