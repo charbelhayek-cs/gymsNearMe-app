@@ -32,21 +32,6 @@
     order: 2;
     text-align: end;
 }
-// .card-container{
-//     display: flex;
-// }
-// .card-container div{
-//     border: 1px solid;
-//     padding: 10px;
-// }
-// .card-container-2{
-//     flex:1;
-//     justify-content: end;
-//     width: auto;
-//     height: auto;
-
-// }
-
 .image-container{
     width: 100%;
    text-align: center;
@@ -66,4 +51,18 @@
 }
 .image-container div{
     border: 1px ;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.info div{
+    border: 1px;
+    padding: 10px;
+}
+.info-container{
+order: 1;
+
 }
