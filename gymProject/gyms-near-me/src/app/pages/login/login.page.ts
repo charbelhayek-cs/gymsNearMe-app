@@ -52,6 +52,7 @@ export class LoginPage implements OnInit {
         }
         else{
           this.presentAlert('welcome back'+' '+ this.lg.username);
+          form.reset();
           this.router.navigateByUrl('/tabs/tab1');
         }
       });
