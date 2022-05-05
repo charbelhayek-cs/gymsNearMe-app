@@ -3,16 +3,24 @@ import { Router } from '@angular/router';
 import {LoginService,Login} from 'src/app/apis/login.service';
 import { NgForm } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
-import { Storage } from '@ionic/storage';
+
+// import {Platform, NavController} from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
   lg: Login=new Login();
 
-  constructor(private router: Router, private service: LoginService, private alertCtrl: AlertController, private storage: Storage) { }
+  constructor(private router: Router,
+    private service: LoginService,
+    private alertCtrl: AlertController
+  ) { }
+
+    // private navctrl: NavController,
+    // private platform: Platform
   goToSignUp(){
     this.router.navigate(['/sign-up']);
   }
