@@ -36,12 +36,24 @@ export class LoginPage implements OnInit {
   }
   onSubmit(form: NgForm) {
     this.lg = form.value;
-    console.log(form.value);
       this.service.login(this.lg).subscribe(response => {
-        console.log(response);
-        this.presentAlert(response.toString());
-        form.reset();
-        this.router.navigateByUrl('/tabs/tab1');
+
+        if(response.toString() === 'User Name is required'){
+          this.presentAlert(response.toString());
+          form.reset();
+        }
+        else if(response.toString() === 'Password is required'){
+          this.presentAlert(response.toString());
+          form.reset();
+        }
+        else if(response.toString() === 'Incorrect Username or password'){
+          this.presentAlert(response.toString());
+          form.reset();
+        }
+        else{
+          this.presentAlert('welcome back'+' '+ this.lg.username);
+          this.router.navigateByUrl('/tabs/tab1');
+        }
       });
   }
 
